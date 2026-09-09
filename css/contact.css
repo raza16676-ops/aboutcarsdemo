@@ -5,6 +5,16 @@
 /* Hero Section */
 .contact-hero {
     height: 50vh;
+    position: relative;
+    display: flex;
+    align-items: center;      /* Vertically centers the content */
+    justify-content: center;  /* Horizontally centers the content */
+    overflow: hidden;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;               /* Keeps text above the background overlay */
 }
 .hero-bg {
     position: absolute;
