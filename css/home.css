@@ -1,0 +1,218 @@
+/* =====================================================
+   HOME.CSS - Homepage specific styling
+===================================================== */
+
+/* Hero Section */
+.hero {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+.hero-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: -2;
+    object-fit: cover;
+}
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(5,5,5,0.8) 0%, rgba(5,5,5,0.3) 50%, rgba(5,5,5,1) 100%);
+    z-index: -1;
+}
+.hero-content h1 {
+    font-size: 6vw;
+    line-height: 1.1;
+    margin-bottom: 20px;
+    background: linear-gradient(to right, #fff, #888);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.hero-content p {
+    font-size: 1.2rem;
+    letter-spacing: 0.1em;
+    color: var(--text-muted);
+    margin-bottom: 40px;
+    text-transform: uppercase;
+}
+
+/* Scroll Sequence Placeholder */
+.scroll-sequence {
+    height: 100vh;
+    background: var(--bg-dark);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5vw;
+}
+.sequence-container {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    gap: 50px;
+}
+.sequence-text {
+    flex: 1;
+}
+.sequence-text h2 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    color: var(--accent-blue);
+}
+.sequence-visual {
+    flex: 1.5;
+    height: 70vh;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+.video-placeholder {
+    width: 100%;
+    height: 100%;
+    background: var(--surface-dark);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-muted);
+    border: 1px dashed var(--border-light);
+    text-align: center;
+}
+
+/* Services Section */
+.section-title {
+    font-size: 3rem;
+    margin-bottom: 60px;
+}
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+.service-card {
+    display: block;
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    group: hover;
+}
+.service-img {
+    height: 500px;
+    overflow: hidden;
+    position: relative;
+}
+.img-placeholder {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.service-card:hover .img-placeholder {
+    transform: scale(1.05);
+}
+.service-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px;
+    background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.service-info h3 {
+    font-size: 1.5rem;
+}
+.service-info .arrow {
+    font-size: 1.5rem;
+    transition: transform 0.3s;
+}
+.service-card:hover .arrow {
+    transform: translateX(10px);
+    color: var(--accent-blue);
+}
+
+/* Why Us Section */
+.benefits-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    border-top: 1px solid var(--border-light);
+}
+.benefit-item {
+    display: flex;
+    align-items: center;
+    padding: 40px 0;
+    border-bottom: 1px solid var(--border-light);
+    transition: background 0.3s;
+}
+.benefit-item:hover {
+    background: rgba(255,255,255,0.02);
+}
+.benefit-item .num {
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    color: var(--accent-blue);
+    margin-right: 50px;
+}
+.benefit-item h4 {
+    font-size: 2rem;
+}
+
+/* Final CTA */
+.final-cta {
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url('../assets/images/home/cta-bg.jpg') center/cover no-repeat;
+    position: relative;
+}
+.final-cta::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(5,5,5,0.8);
+}
+.cta-content {
+    position: relative;
+    z-index: 1;
+}
+.cta-content h2 {
+    font-size: 4vw;
+    margin-bottom: 40px;
+}
+
+@media (max-width: 992px) {
+    .services-grid { grid-template-columns: 1fr; }
+    .sequence-container { flex-direction: column; }
+    .sequence-visual { width: 100%; }
+}
+
+#scrub-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    background: #000; /* Fallback while loading */
+}
+#sequence-canvas {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the canvas scales like a background image */
+    border-radius: 10px;
+    background: #050505; /* Matches your dark theme while loading */
+}

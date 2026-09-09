@@ -1,0 +1,201 @@
+/* =====================================================
+   DETAILING.CSS - Detailing page specific styling
+===================================================== */
+
+/* Hero Section */
+.detailing-hero {
+    height: 70vh;
+    position: relative;
+    display: flex;
+    align-items: center;      /* Vertically centers the content */
+    justify-content: center;  /* Horizontally centers the content */
+    overflow: hidden;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;               /* Keeps text above the background overlay */
+}
+.hero-bg {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    z-index: -2;
+}
+.img-placeholder {
+    width: 100%; height: 100%;
+}
+.video-overlay {
+    background: linear-gradient(to bottom, rgba(5,5,5,0.9), rgba(5,5,5,0.4), rgba(5,5,5,1));
+}
+
+/* Intro Section */
+.intro-desc {
+    font-size: 1.5rem;
+    max-width: 800px;
+    margin: 0 auto;
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+/* Scroll Process Section */
+.process-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: relative;
+    margin-top: 50px;
+}
+.process-visuals {
+    position: sticky;
+    top: 20vh; /* Sticks to screen during scroll */
+    width: 45%;
+    height: 60vh;
+    border-radius: 12px;
+    overflow: hidden;
+}
+.visual-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.process-img {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    opacity: 0;
+    transition: opacity 0.6s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-muted);
+    font-family: var(--font-heading);
+    letter-spacing: 0.1em;
+}
+.process-img.active {
+    opacity: 1;
+}
+
+.process-steps {
+    width: 45%;
+    padding-bottom: 20vh; /* Space to scroll past last item */
+}
+.step {
+    padding: 10vh 0;
+    opacity: 0.2; /* Dim by default, active state applied via JS */
+    transition: opacity 0.4s ease;
+}
+.step.active {
+    opacity: 1;
+}
+.step-num {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    color: var(--accent-blue);
+    display: block;
+    margin-bottom: 15px;
+}
+.step h3 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+.step p {
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+/* Packages Section */
+.packages-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 50px;
+}
+.package-card {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--border-light);
+    border-radius: 12px;
+    padding: 50px 40px;
+    position: relative;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s;
+    display: flex;
+    flex-direction: column;
+}
+.package-card:hover {
+    transform: translateY(-10px);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+.package-card.popular {
+    background: linear-gradient(145deg, rgba(255,255,255,0.05), rgba(0, 210, 255, 0.05));
+    border-color: rgba(0, 210, 255, 0.3);
+}
+.popular-tag {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--accent-blue);
+    color: var(--bg-dark);
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-family: var(--font-heading);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+.package-header {
+    margin-bottom: 20px;
+}
+.package-header h3 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+.price {
+    font-size: 1.2rem;
+    color: var(--accent-blue);
+    font-family: var(--font-heading);
+}
+.package-time {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid var(--border-light);
+}
+.package-features {
+    list-style: none;
+    margin-bottom: 40px;
+    flex-grow: 1;
+}
+.package-features li {
+    margin-bottom: 15px;
+    color: #ccc;
+    position: relative;
+    padding-left: 20px;
+}
+.package-features li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--accent-blue);
+}
+.w-100 {
+    display: block;
+    width: 100%;
+}
+
+@media (max-width: 992px) {
+    .process-wrapper { flex-direction: column; }
+    .process-visuals { 
+        position: relative; 
+        top: 0; 
+        width: 100%; 
+        height: 40vh; 
+        margin-bottom: 30px;
+    }
+    .process-steps { width: 100%; }
+    .packages-grid { grid-template-columns: 1fr; }
+}

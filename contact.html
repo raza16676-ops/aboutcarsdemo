@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book an Appointment | Luxe Auto</title>
+    <meta name="description" content="Schedule your premium car detailing, paint protection, or customization service.">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/contact.css">
+</head>
+<body>
+
+    <!-- Custom Cursor -->
+    <div class="custom-cursor"></div>
+
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="preloader-text">ESTABLISHING CONNECTION</div>
+        <div class="preloader-bar">
+            <div class="preloader-progress"></div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <header>
+        <a href="index.html" class="logo">ABOUT CARS MD</a>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="detailing.html">Detailing</a>
+            <a href="ppf-wraps.html">PPF & Wraps</a>
+            <a href="tesla.html">Tesla</a>
+            <a href="addons.html">Add-ons</a>
+            <a href="about.html">About</a>
+        </nav>
+        <a href="contact.html" class="btn-primary active">Book Now</a>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero contact-hero">
+        <div class="hero-bg">
+            <div class="img-placeholder" style="background: url('assets/images/global/contact-bg.jpg') center/cover;"></div>
+            <div class="video-overlay"></div>
+        </div>
+        
+        <div class="hero-content text-center">
+            <h1>SECURE YOUR<br>SLOT.</h1>
+            <p>Our calendar fills up weeks in advance. Request your booking below.</p>
+        </div>
+    </section>
+
+    <!-- CONTACT & BOOKING SECTION -->
+    <section class="contact-section section-padding">
+        <div class="contact-container">
+            
+            <!-- Left Side: Information & Map -->
+            <div class="contact-info panel-reveal">
+                <h2 class="reveal-text">REACH OUT</h2>
+                <p class="intro-desc reveal-text">Have a question about our services? Our concierge team is ready to assist you in building the perfect package for your vehicle.</p>
+                
+                <div class="info-blocks">
+                    <div class="info-block">
+                        <span class="info-label">Location</span>
+                        <p>1280 Velocity Drive<br>Los Angeles, CA 90015</p>
+                    </div>
+                    <div class="info-block">
+                        <span class="info-label">Contact</span>
+                        <p>+1 (310) 555-0198<br>concierge@luxeauto.com</p>
+                    </div>
+                    <div class="info-block">
+                        <span class="info-label">Hours</span>
+                        <p>Mon-Fri: 8:00 AM - 6:00 PM<br>Sat: By Appointment Only<br>Sun: Closed</p>
+                    </div>
+                </div>
+
+                <!-- Dark Map Placeholder -->
+                <div class="map-placeholder interactive">
+                    [ Interactive Map Render Placeholder ]<br>
+                    <span style="font-size: 0.8rem; color: var(--accent-blue);">Google Maps iframe goes here</span>
+                </div>
+            </div>
+
+            <!-- Right Side: Booking Form -->
+            <div class="booking-form-wrapper panel-reveal">
+                <form id="bookingForm" class="booking-form" novalidate>
+                    <h3>REQUEST A QUOTE</h3>
+                    
+                    <div class="form-row">
+                        <div class="input-group interactive">
+                            <input type="text" id="name" name="name" required placeholder=" ">
+                            <label for="name">Full Name</label>
+                            <span class="error-msg">Please enter your name</span>
+                        </div>
+                        <div class="input-group interactive">
+                            <input type="email" id="email" name="email" required placeholder=" ">
+                            <label for="email">Email Address</label>
+                            <span class="error-msg">Please enter a valid email</span>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="input-group interactive">
+                            <input type="tel" id="phone" name="phone" required placeholder=" ">
+                            <label for="phone">Phone Number</label>
+                            <span class="error-msg">Please enter your phone number</span>
+                        </div>
+                        <div class="input-group interactive">
+                            <input type="text" id="vehicle" name="vehicle" required placeholder=" ">
+                            <label for="vehicle">Vehicle Make & Model</label>
+                            <span class="error-msg">Please enter your vehicle details</span>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="input-group interactive">
+                            <select id="service" name="service" required>
+                                <option value="" disabled selected></option>
+                                <option value="detailing">Premium Detailing</option>
+                                <option value="ppf">Paint Protection Film (PPF)</option>
+                                <option value="wrap">Vinyl Color Wrap</option>
+                                <option value="tesla">Tesla Upgrades</option>
+                                <option value="ceramic">Ceramic Coating</option>
+                                <option value="other">Other / Consultation</option>
+                            </select>
+                            <label for="service">Primary Service</label>
+                            <span class="error-msg">Please select a service</span>
+                        </div>
+                        <div class="input-group interactive">
+                            <input type="date" id="date" name="date" required placeholder=" ">
+                            <label for="date" class="active-label">Preferred Date</label>
+                            <span class="error-msg">Please select a date</span>
+                        </div>
+                    </div>
+
+                    <div class="input-group interactive">
+                        <textarea id="message" name="message" rows="4" placeholder=" "></textarea>
+                        <label for="message">Project Details or Special Requests</label>
+                    </div>
+
+                    <button type="submit" class="btn-primary form-submit interactive">
+                        <span class="btn-text">SUBMIT REQUEST</span>
+                        <div class="btn-loader"></div>
+                    </button>
+                    
+                    <div class="form-success-msg">
+                        Request received. Our team will contact you within 24 hours.
+                    </div>
+                </form>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- JS Libraries -->
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/contact.js"></script>
+</body>
+</html>

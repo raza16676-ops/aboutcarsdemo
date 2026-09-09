@@ -1,0 +1,213 @@
+/* =====================================================
+   CONTACT.CSS - Booking Form & Map Layout
+===================================================== */
+
+/* Hero Section */
+.contact-hero {
+    height: 50vh;
+}
+.hero-bg {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    z-index: -2;
+}
+.video-overlay {
+    background: linear-gradient(to bottom, rgba(5,5,5,0.9), rgba(5,5,5,0.5), rgba(5,5,5,1));
+}
+
+/* Container Layout */
+.contact-container {
+    display: flex;
+    gap: 80px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+.contact-info {
+    flex: 1;
+}
+.booking-form-wrapper {
+    flex: 1.2;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--border-light);
+    border-radius: 12px;
+    padding: 50px;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+}
+
+/* Contact Info Side */
+.contact-info .intro-desc {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 40px;
+}
+.info-blocks {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+.info-block {
+    flex: 1 1 45%;
+}
+.info-label {
+    font-family: var(--font-heading);
+    color: var(--accent-blue);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 0.8rem;
+    display: block;
+    margin-bottom: 10px;
+}
+.info-block p {
+    color: var(--text-main);
+    line-height: 1.6;
+}
+.map-placeholder {
+    width: 100%;
+    height: 300px;
+    background: #111;
+    border: 1px solid var(--border-light);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-muted);
+    font-family: monospace;
+    text-align: center;
+}
+
+/* Booking Form Styles */
+.booking-form h3 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+    color: var(--text-main);
+}
+.form-row {
+    display: flex;
+    gap: 30px;
+}
+.input-group {
+    position: relative;
+    margin-bottom: 40px;
+    width: 100%;
+}
+.input-group input, 
+.input-group select, 
+.input-group textarea {
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid var(--border-light);
+    padding: 10px 0;
+    color: var(--text-main);
+    font-family: var(--font-body);
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s;
+}
+.input-group textarea {
+    resize: none;
+}
+/* Style the select dropdown */
+.input-group select {
+    appearance: none;
+    -webkit-appearance: none;
+    cursor: pointer;
+}
+.input-group select option {
+    background: var(--surface-dark);
+    color: var(--text-main);
+}
+
+/* Floating Label Logic */
+.input-group label {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    color: var(--text-muted);
+    pointer-events: none;
+    transition: 0.3s ease all;
+}
+.input-group input:focus ~ label,
+.input-group input:not(:placeholder-shown) ~ label,
+.input-group textarea:focus ~ label,
+.input-group textarea:not(:placeholder-shown) ~ label,
+.input-group select:focus ~ label,
+.input-group select:valid ~ label,
+.active-label {
+    top: -20px;
+    font-size: 0.8rem;
+    color: var(--accent-blue);
+    font-family: var(--font-heading);
+    letter-spacing: 0.05em;
+}
+.input-group input:focus,
+.input-group select:focus,
+.input-group textarea:focus {
+    border-bottom-color: var(--accent-blue);
+}
+
+/* Error States */
+.input-group.error input,
+.input-group.error select {
+    border-bottom-color: #ff3366;
+}
+.input-group.error label {
+    color: #ff3366;
+}
+.error-msg {
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    color: #ff3366;
+    font-size: 0.75rem;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+.input-group.error .error-msg {
+    opacity: 1;
+}
+
+/* Submit Button & Loader */
+.form-submit {
+    width: 100%;
+    padding: 20px;
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255,255,255,0.05);
+}
+.form-submit:hover {
+    background: var(--text-main);
+}
+.btn-loader {
+    display: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--bg-dark);
+    border-top: 2px solid transparent;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+@keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+
+.form-success-msg {
+    margin-top: 20px;
+    padding: 15px;
+    background: rgba(0, 210, 255, 0.1);
+    border: 1px solid var(--accent-blue);
+    color: var(--accent-blue);
+    text-align: center;
+    border-radius: 4px;
+    display: none; /* Shown via JS */
+}
+
+@media (max-width: 992px) {
+    .contact-container { flex-direction: column; }
+    .form-row { flex-direction: column; gap: 0; }
+    .booking-form-wrapper { padding: 30px; }
+}

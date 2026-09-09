@@ -1,0 +1,173 @@
+/* =====================================================
+   ABOUT.CSS - Storytelling and Statistics Layouts
+===================================================== */
+
+/* Hero Section */
+.about-hero {
+    height: 70vh;
+    position: relative;
+    display: flex;
+    align-items: center;      /* Vertically centers the content */
+    justify-content: center;  /* Horizontally centers the content */
+    overflow: hidden;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;               /* Keeps text above the background overlay */
+}
+.hero-bg {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    z-index: -2;
+}
+.video-overlay {
+    background: linear-gradient(to bottom, rgba(5,5,5,0.9), rgba(5,5,5,0.3), rgba(5,5,5,1));
+}
+
+/* Story Blocks */
+.story-block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 80px;
+    margin-bottom: 120px;
+}
+.story-block.reverse {
+    flex-direction: row-reverse;
+}
+.story-img {
+    flex: 1;
+    height: 600px;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+}
+.story-img .img-placeholder {
+    width: 100%;
+    height: 100%;
+    transition: transform 1.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.story-block:hover .story-img .img-placeholder {
+    transform: scale(1.05);
+}
+.story-text {
+    flex: 1;
+}
+.story-text h2 {
+    font-size: 3rem;
+    margin-bottom: 30px;
+    color: var(--accent-blue);
+}
+.story-text p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: var(--text-muted);
+}
+
+/* Stats Section */
+.stats-section {
+    background: #0a0a0a;
+    border-top: 1px solid var(--border-light);
+    border-bottom: 1px solid var(--border-light);
+}
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+}
+.stat-item {
+    padding: 20px;
+}
+.stat-number {
+    font-family: var(--font-heading);
+    font-size: 4.5rem;
+    font-weight: 700;
+    color: var(--text-main);
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.stat-label {
+    font-size: 1rem;
+    color: var(--accent-blue);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+/* Full Screen Banner */
+.philosophy-banner {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+.banner-bg {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    z-index: -1;
+}
+.banner-bg .img-placeholder {
+    width: 100%; height: 100%;
+}
+.banner-content {
+    max-width: 1000px;
+    padding: 0 5vw;
+}
+.banner-content h2 {
+    font-size: 5vw;
+    line-height: 1.1;
+    margin-bottom: 30px;
+}
+.banner-content p {
+    font-size: 1.5rem;
+    color: var(--text-muted);
+}
+
+/* Workshop Grid */
+.workshop-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+.workshop-img {
+    height: 450px;
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+}
+.workshop-img .img-placeholder {
+    width: 100%; height: 100%;
+    transition: transform 0.6s ease;
+}
+.workshop-img:hover .img-placeholder {
+    transform: scale(1.08);
+}
+.overlay-text {
+    position: absolute;
+    bottom: 0; left: 0; width: 100%;
+    padding: 30px;
+    background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    transform: translateY(20px);
+    opacity: 0;
+    transition: all 0.4s ease;
+}
+.workshop-img:hover .overlay-text {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+@media (max-width: 992px) {
+    .story-block, .story-block.reverse {
+        flex-direction: column;
+        gap: 40px;
+    }
+    .story-img { width: 100%; height: 400px; }
+    .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 60px; }
+    .workshop-grid { grid-template-columns: 1fr; }
+}

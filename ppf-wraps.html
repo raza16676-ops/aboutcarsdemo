@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PPF & Wraps | Luxe Auto</title>
+    <meta name="description" content="Advanced Paint Protection Film (PPF) and premium vinyl color change wraps.">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/ppf-wraps.css">
+</head>
+<body>
+
+    <!-- Custom Cursor -->
+    <div class="custom-cursor"></div>
+
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="preloader-text">ARMOR YOUR FINISH</div>
+        <div class="preloader-bar">
+            <div class="preloader-progress"></div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <header>
+        <a href="index.html" class="logo">ABOUT CARS MD</a>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="detailing.html">Detailing</a>
+            <a href="ppf-wraps.html" class="active">PPF & Wraps</a>
+            <a href="tesla.html">Tesla</a>
+            <a href="addons.html">Add-ons</a>
+            <a href="about.html">About</a>
+        </nav>
+        <a href="contact.html" class="btn-primary">Book Now</a>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero ppf-hero">
+        <div class="hero-bg">
+            <div class="img-placeholder" style="background: url('assets/images/ppf-wraps/hero-ppf.jpg') center/cover;"></div>
+            <div class="video-overlay"></div>
+        </div>
+        
+        <div class="hero-content text-center">
+            <h1>SHIELD.<br>TRANSFORM.</h1><br>
+            <p>Invisible protection and striking color transformations.</p>
+        </div>
+    </section>
+
+    <!-- TWO PILLARS SECTION -->
+    <section class="pillars-section section-padding">
+        <div class="pillars-grid">
+            <div class="pillar-card reveal-up">
+                <h2>PAINT PROTECTION FILM (PPF)</h2>
+                <p>An optically clear, self-healing polyurethane shield. Engineered to absorb rock chips, prevent scratches, and block UV degradation while enhancing the deep gloss of your factory paint.</p>
+                <ul class="feature-list">
+                    <li>Self-Healing Technology</li>
+                    <li>Rock Chip Resistance</li>
+                    <li>Stain & Chemical Barrier</li>
+                    <li>10-Year Warranty</li>
+                </ul>
+            </div>
+            
+            <div class="pillar-card reveal-up">
+                <h2>VINYL WRAPS</h2>
+                <p>Complete aesthetic freedom. Change your vehicle's color and texture without affecting the original paint underneath. From subtle satins to aggressive color shifts.</p>
+                <ul class="feature-list">
+                    <li>Limitless Color Options</li>
+                    <li>Matte, Satin, & Gloss Finishes</li>
+                    <li>Fully Reversible</li>
+                    <li>Protects Original Clear Coat</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- INTERACTIVE VISUALIZER SECTION -->
+    <section class="visualizer-section section-padding text-center">
+        <h2 class="section-title reveal-text">EXPERIENCE THE FINISH</h2>
+        <p class="intro-desc reveal-text">Select a material below to preview the transformation.</p>
+
+        <div class="visualizer-container">
+            <!-- Layers of Car Images -->
+            <div class="visualizer-display">
+                <!-- Replace backgrounds with perfectly aligned transparent PNGs of a car in different finishes -->
+                <img src="assets/images/wraps/img1.jpg" alt="Gloss Finish" class="car-layer active" id="layer-gloss">
+                <img src="assets/images/wraps/img2.jpg" alt="Matte Finish" class="car-layer" id="layer-matte">
+                <img src="assets/images/wraps/img3.webp" alt="Satin Finish" class="car-layer" id="layer-satin">
+                <img src="assets/images/wraps/img4.webp" alt="Color Shift Finish" class="car-layer" id="layer-shift">
+                <img src="assets/images/wraps/img5.jpg" alt="Carbon Fiber Finish" class="car-layer" id="layer-carbon">
+            </div>
+
+            <!-- Interactive Controls -->
+            <div class="visualizer-controls">
+                <button class="finish-btn active interactive" data-target="layer-gloss">
+                    <span class="swatch" style="background: #000; border: 1px solid #333;"></span> GLOSS
+                </button>
+                <button class="finish-btn interactive" data-target="layer-matte">
+                    <span class="swatch" style="background: #1a1a1a;"></span> MATTE
+                </button>
+                <button class="finish-btn interactive" data-target="layer-satin">
+                    <span class="swatch" style="background: #2a2a2a; border: 1px solid #444;"></span> SATIN
+                </button>
+                <button class="finish-btn interactive" data-target="layer-shift">
+                    <span class="swatch" style="background: linear-gradient(45deg, #5b0060, #ca485c);"></span> COLOR SHIFT
+                </button>
+                <button class="finish-btn interactive" data-target="layer-carbon">
+                    <span class="swatch" style="background: repeating-linear-gradient(45deg, #111, #111 2px, #333 2px, #333 4px);"></span> CARBON
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALLERY PORTFOLIO -->
+    <section class="gallery-section section-padding">
+        <h2 class="section-title text-center reveal-text">RECENT TRANSFORMATIONS</h2><br><br>
+        
+        <!-- Horizontal scrolling or grid based on device -->
+        <div class="gallery-grid">
+            <div class="gallery-item interactive">
+                <img src="assets/images/wraps/img6.webp" alt="Porsche GT3 Satin Black" class="img-placeholder">
+                <div class="gallery-caption">Porsche GT3 // Satin Black Wrap</div>
+            </div>
+            <div class="gallery-item interactive">
+                <img src="assets/images/wraps/img7.jpg" alt="Porsche GT3 Satin Black" class="img-placeholder">
+                <div class="gallery-caption">McLaren 720s // Full Body Clear PPF</div>
+            </div>
+            <div class="gallery-item interactive">
+                <img src="assets/images/wraps/img8.webp" alt="Porsche GT3 Satin Black" class="img-placeholder">
+                <div class="gallery-caption">Audi RS6 // Nardo Grey Vinyl</div>
+            </div>
+            <div class="gallery-item interactive">
+                <img src="assets/images/wraps/img9.jpg" alt="Porsche GT3 Satin Black" class="img-placeholder">
+                <div class="gallery-caption">BMW M4 // Midnight Purple Shift</div>
+            </div>
+        </div>
+        
+        <div class="text-center" style="margin-top: 50px;">
+            <a href="contact.html" class="btn-primary interactive">Request a Custom Quote</a>
+        </div>
+    </section>
+
+    <!-- JS Libraries -->
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/ppf-wraps.js"></script>
+</body>
+</html>

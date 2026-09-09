@@ -1,0 +1,120 @@
+/* =====================================================
+   ADDONS.CSS - Add-ons page specific styling
+===================================================== */
+
+/* Hero Section */
+.addons-hero {
+    height: 60vh;
+    position: relative;
+    display: flex;
+    align-items: center;      /* Vertically centers the content */
+    justify-content: center;  /* Horizontally centers the content */
+    overflow: hidden;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;               /* Keeps text above the background overlay */
+}
+.hero-bg {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    z-index: -2;
+}
+.img-placeholder {
+    width: 100%; height: 100%;
+}
+.video-overlay {
+    background: linear-gradient(to bottom, rgba(5,5,5,0.9), rgba(5,5,5,0.5), rgba(5,5,5,1));
+}
+
+/* Add-ons Grid */
+.addons-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+/* Spotlight Card Design */
+.addon-card {
+    position: relative;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.03);
+    padding: 1px; /* Creates the border width for the spotlight */
+    overflow: hidden;
+}
+.card-inner {
+    background: var(--surface-dark);
+    border-radius: 11px; /* Slightly less than parent to fit inside border */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 2;
+}
+.spotlight {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: radial-gradient(800px circle at var(--mouse-x) var(--mouse-y), rgba(0, 210, 255, 0.4), transparent 40%);
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.addon-card:hover .spotlight {
+    opacity: 1;
+}
+
+/* Card Content */
+.addon-img {
+    height: 250px;
+    width: 100%;
+    border-radius: 11px 11px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-muted);
+    font-family: var(--font-heading);
+    letter-spacing: 0.1em;
+    background-size: cover !important;
+    background-position: center !important;
+}
+.addon-info {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+.addon-info h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: var(--text-main);
+}
+.addon-info p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+.price-tag {
+    display: inline-block;
+    font-family: var(--font-heading);
+    color: var(--accent-blue);
+    font-weight: 600;
+    font-size: 1.1rem;
+    letter-spacing: 0.05em;
+    border-top: 1px solid var(--border-light);
+    padding-top: 20px;
+    margin-top: auto;
+}
+
+@media (max-width: 1024px) {
+    .addons-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 768px) {
+    .addons-grid {
+        grid-template-columns: 1fr;
+    }
+}

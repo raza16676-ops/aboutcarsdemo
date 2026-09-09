@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tesla Upgrades | Luxe Auto</title>
+    <meta name="description" content="Premium aftermarket upgrades, ambient lighting, and bespoke modifications for Tesla vehicles.">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/tesla.css">
+</head>
+<body>
+
+    <!-- Custom Cursor -->
+    <div class="custom-cursor"></div>
+
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="preloader-text" style="font-family: monospace; letter-spacing: 0.3em;">INITIALIZING_SYSTEMS...</div>
+        <div class="preloader-bar">
+            <div class="preloader-progress"></div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <header>
+        <a href="index.html" class="logo">ABOUT CARS MD</a>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="detailing.html">Detailing</a>
+            <a href="ppf-wraps.html">PPF & Wraps</a>
+            <a href="tesla.html" class="active">Tesla</a>
+            <a href="addons.html">Add-ons</a>
+            <a href="about.html">About</a>
+        </nav>
+        <a href="contact.html" class="btn-primary">Book Now</a>
+    </header>
+
+    <!-- TECH HERO SECTION -->
+    <section class="hero tesla-hero">
+        <div class="grid-bg"></div>
+        <div class="hero-content text-center">
+            <div class="tech-badge reveal-text">SYS.04 // BESPOKE MODIFICATION</div>
+            <h1 class="glitch-text">UPGRADE<br>THE FUTURE.</h1>
+            <p class="tech-subtext">Advanced aesthetics and technological enhancements engineered exclusively for Tesla.</p>
+        </div>
+    </section>
+
+    <!-- INTERACTIVE SCHEMATIC HUD -->
+    <section class="schematic-section section-padding">
+        <div class="section-header text-center">
+            <h2 class="reveal-text">INTERIOR ENHANCEMENTS</h2>
+            <p class="intro-desc reveal-text">Select an interface node to explore available hardware upgrades.</p>
+        </div>
+
+        <div class="hud-container">
+            <!-- Left Side: Interactive Blueprint -->
+            <div class="blueprint-area">
+                <!-- Placeholder for top-down Tesla interior blueprint/wireframe -->
+                <div class="blueprint-img">
+                    
+                    <img src="assets/images/tesla/img3.webp" alt="Tesla Interior Schematic" class="img-placeholder">
+                    
+                    <!-- Hotspots -->
+                    <div class="hotspot interactive" data-module="lighting" style="top: 35%; left: 50%;">
+                        <div class="pulse"></div>
+                        <div class="core"></div>
+                    </div>
+                    <div class="hotspot interactive" data-module="steering" style="top: 45%; left: 40%;">
+                        <div class="pulse"></div>
+                        <div class="core"></div>
+                    </div>
+                    <div class="hotspot interactive" data-module="screens" style="top: 55%; left: 50%;">
+                        <div class="pulse"></div>
+                        <div class="core"></div>
+                    </div>
+                    <div class="hotspot interactive" data-module="carbon" style="top: 45%; left: 70%;">
+                        <div class="pulse"></div>
+                        <div class="core"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Side: Data Panel -->
+            <div class="data-panel">
+                <div class="panel-corners"></div>
+                
+                <!-- Default State -->
+                <div class="module-info active" id="module-default">
+                    <h3 class="mono-heading">// SYSTEM STANDBY</h3>
+                    <p>Awaiting user input. Select a node on the schematic to view component details.</p>
+                </div>
+
+                <!-- Module: Ambient Lighting -->
+                <div class="module-info" id="module-lighting">
+                    <h3 class="mono-heading">// AMBIENT LIGHTING</h3>
+                    <img src="assets/images/tesla/img5.webp" alt="Tesla Ambient Lighting" class="module-image">
+                    <p>Fully integrated, app-controlled LED ambient lighting. Matches factory UI controls with over 64,000 color variations. Seamless OEM-style installation along dash and door trims.</p>
+                </div>
+
+                <!-- Module: Steering Wheel -->
+                <div class="module-info" id="module-steering">
+                    <h3 class="mono-heading">// CARBON YOKE & STEERING</h3>
+                    <img src="assets/images/tesla/img6.jpeg" alt="Tesla Ambient Lighting" class="module-image">
+                    <p>Custom steering wheel replacements. Available in matte or gloss carbon fiber, premium alcantara, and perforated leather. Retains all OEM heating and airbag functionality.</p>
+                </div>
+
+                <!-- Module: Rear Screens -->
+                <div class="module-info" id="module-screens">
+                    <h3 class="mono-heading">// REAR ENTERTAINMENT</h3>
+                    <div class="module-image" style="background: #222;">[ Rear Screen Image ]</div>
+                    <p>8-inch rear climate and entertainment display. Independent Bluetooth audio, seat heating controls, passenger seat adjustment, and native streaming app support.</p>
+                </div>
+
+                <!-- Module: Carbon Fiber -->
+                <div class="module-info" id="module-carbon">
+                    <h3 class="mono-heading">// CARBON FIBER TRIM</h3>
+                    <div class="module-image" style="background: #2a2a2a;">[ Carbon Trim Image ]</div>
+                    <p>Real molded carbon fiber overlays and replacements for the dashboard, center console, and door switches. Ultra-thin, precision-cut, and UV-resistant.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TECH BENTO GRID (Catalog) -->
+    <section class="catalog-section section-padding">
+        <h2 class="section-title reveal-text">ADDITIONAL HARDWARE</h2>
+        
+        <div class="bento-grid">
+            <!-- Item 1 (Large) -->
+            <div class="bento-card large interactive">
+                <div class="card-bg" style="background: #111;">[ Premium Floor Mats ]</div>
+                <div class="card-overlay">
+                    <span class="tech-label">HW.01</span>
+                    <h3>All-Weather Custom Mats</h3>
+                </div>
+            </div>
+            
+            <!-- Item 2 -->
+            <div class="bento-card interactive">
+                <div class="card-bg" style="background: #1a1a1a;">[ Power Frunk ]</div>
+                <div class="card-overlay">
+                    <span class="tech-label">HW.02</span>
+                    <h3>Power Frunk Kit</h3>
+                </div>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="bento-card interactive">
+                <div class="card-bg" style="background: #222;">[ Screen Swivel ]</div>
+                <div class="card-overlay">
+                    <span class="tech-label">HW.03</span>
+                    <h3>Screen Swivel Mount</h3>
+                </div>
+            </div>
+
+            <!-- Item 4 (Wide) -->
+            <div class="bento-card wide interactive">
+                <div class="card-bg" style="background: #2a2a2a;">[ Sound Deadening ]</div>
+                <div class="card-overlay">
+                    <span class="tech-label">HW.04</span>
+                    <h3>Acoustic Sound Deadening Insulation</h3>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center" style="margin-top: 60px;">
+            <a href="contact.html" class="btn-primary interactive">Configure Your Build</a>
+        </div>
+    </section>
+
+    <!-- JS Libraries -->
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/tesla.js"></script>
+</body>
+</html>
