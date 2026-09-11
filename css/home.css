@@ -216,3 +216,15 @@
     border-radius: 10px;
     background: #050505; /* Matches your dark theme while loading */
 }
+
+.logo-img {
+    max-height: 50px; /* Adjust this value based on how tall your navbar is */
+    width: auto;      /* Keeps the aspect ratio proportional */
+    display: block;
+    transition: opacity 0.3s ease;
+}
+
+/* Optional: Adds a slight fade effect when hovering over the logo */
+.logo:hover .logo-img {
+    opacity: 0.8;
+}
