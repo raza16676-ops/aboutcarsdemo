@@ -4,7 +4,7 @@
 
 /* Hero Section */
 .addons-hero {
-    height: 60vh;
+    height: 100vh;
     position: relative;
     display: flex;
     align-items: center;      /* Vertically centers the content */
@@ -12,9 +12,20 @@
     overflow: hidden;
 }
 
-.hero-content {
-    position: relative;
-    z-index: 2;               /* Keeps text above the background overlay */
+.hero-content h1 {
+    font-size: 6vw;
+    line-height: 1.1;
+    margin-bottom: 20px;
+    background: linear-gradient(to right, #fff, #888);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.hero-content p {
+    font-size: 1.2rem;
+    letter-spacing: 0.1em;
+    color: var(--text-muted);
+    margin-bottom: 40px;
+    text-transform: uppercase;
 }
 .hero-bg {
     position: absolute;
@@ -73,7 +84,7 @@
 .spotlight {
     position: absolute;
     top: 0; left: 0; width: 100%; height: 100%;
-    background: radial-gradient(800px circle at var(--mouse-x) var(--mouse-y), rgba(0, 210, 255, 0.4), transparent 40%);
+    background: radial-gradient(800px circle at var(--mouse-x) var(--mouse-y), rgba(255, 102, 0, 0.4), transparent 40%);
     z-index: 1;
     opacity: 0;
     transition: opacity 0.3s ease;
@@ -117,7 +128,7 @@
 .price-tag {
     display: inline-block;
     font-family: var(--font-heading);
-    color: var(--accent-blue);
+    color: var(--accent-orange);
     font-weight: 600;
     font-size: 1.1rem;
     letter-spacing: 0.05em;

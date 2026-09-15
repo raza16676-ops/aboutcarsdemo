@@ -4,7 +4,7 @@
 
 /* Hero Section */
 .detailing-hero {
-    height: 70vh;
+    height: 100vh;
     position: relative;
     display: flex;
     align-items: center;      /* Vertically centers the content */
@@ -12,9 +12,20 @@
     overflow: hidden;
 }
 
-.hero-content {
-    position: relative;
-    z-index: 2;               /* Keeps text above the background overlay */
+.hero-content h1 {
+    font-size: 6vw;
+    line-height: 1.1;
+    margin-bottom: 20px;
+    background: linear-gradient(to right, #fff, #888);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.hero-content p {
+    font-size: 1.2rem;
+    letter-spacing: 0.1em;
+    color: var(--text-muted);
+    margin-bottom: 40px;
+    text-transform: uppercase;
 }
 .hero-bg {
     position: absolute;
@@ -108,7 +119,7 @@
 .step-num {
     font-family: var(--font-heading);
     font-size: 1.5rem;
-    color: var(--accent-blue);
+    color: var(--accent-orange);
     display: block;
     margin-bottom: 15px;
 }
@@ -154,7 +165,7 @@
     top: -15px;
     left: 50%;
     transform: translateX(-50%);
-    background: var(--accent-blue);
+    background: var(--accent-orange);
     color: var(--bg-dark);
     padding: 5px 15px;
     border-radius: 20px;
@@ -173,7 +184,7 @@
 }
 .price {
     font-size: 1.2rem;
-    color: var(--accent-blue);
+    color: var(--accent-orange);
     font-family: var(--font-heading);
 }
 .package-time {
@@ -198,7 +209,7 @@
     content: '✓';
     position: absolute;
     left: 0;
-    color: var(--accent-blue);
+    color: var(--accent-orange);
 }
 .w-100 {
     display: block;

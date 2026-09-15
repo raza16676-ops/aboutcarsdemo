@@ -55,8 +55,8 @@ document.addEventListener("DOMContentLoaded", () => {
             scanline.style.left = '0';
             scanline.style.width = '100%';
             scanline.style.height = '2px';
-            scanline.style.background = 'rgba(0, 210, 255, 0.5)';
-            scanline.style.boxShadow = '0 0 10px rgba(0, 210, 255, 0.8)';
+            scanline.style.background = 'rgba(255, 102, 0, 0.4)';
+            scanline.style.boxShadow = '0 0 10px rgba(255, 102, 0, 0.4)';
             scanline.style.zIndex = '10';
             card.appendChild(scanline);
 

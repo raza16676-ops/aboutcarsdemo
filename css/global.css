@@ -9,8 +9,8 @@
     --surface-dark: #111111;
     --text-main: #ffffff;
     --text-muted: #888888;
-    --accent-blue: #00d2ff;
-    --accent-glow: rgba(0, 210, 255, 0.4);
+    --accent-orange: #FF6600;
+    --accent-glow: rgba(255, 102, 0, 0.4);
     --border-light: rgba(255, 255, 255, 0.1);
     
     /* Typography */
@@ -73,7 +73,7 @@ a {
 .custom-cursor.hover {
     width: 60px;
     height: 60px;
-    background: var(--accent-blue);
+    background: var(--accent-orange);
     mix-blend-mode: normal;
     opacity: 0.5;
 }
@@ -156,7 +156,7 @@ header.scrolled {
     left: 0;
     width: 0%;
     height: 1px;
-    background: var(--accent-blue);
+    background: var(--accent-orange);
     transition: var(--transition-smooth);
 }
 .nav-links a:hover::after { width: 100%; }

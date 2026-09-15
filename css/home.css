@@ -70,7 +70,7 @@
 .sequence-text h2 {
     font-size: 4rem;
     margin-bottom: 20px;
-    color: var(--accent-blue);
+    color: var(--accent-orange);
 }
 .sequence-visual {
     flex: 1.5;
@@ -142,7 +142,7 @@
 }
 .service-card:hover .arrow {
     transform: translateX(10px);
-    color: var(--accent-blue);
+    color: var(--accent-orange);
 }
 
 /* Why Us Section */
@@ -165,7 +165,7 @@
 .benefit-item .num {
     font-family: var(--font-heading);
     font-size: 1.2rem;
-    color: var(--accent-blue);
+    color: var(--accent-orange);
     margin-right: 50px;
 }
 .benefit-item h4 {
