@@ -4,57 +4,33 @@
 
 document.addEventListener("DOMContentLoaded", () => {
     
-    // 1. Canvas Image Sequence Scrubbing
-    const canvas = document.getElementById("sequence-canvas");
-    
-    // SAFETY CHECK: Prevents the entire script from crashing if the canvas is missing
-    if (canvas) {
-        const context = canvas.getContext("2d");
-        canvas.width = 1920;
-        canvas.height = 1080;
+     // 1. Process Section Scroll Logic
+     const steps = document.querySelectorAll(".step");
+     const visuals = document.querySelectorAll(".process-img");
+ 
+     // Loop through each text step and create a ScrollTrigger
+     steps.forEach((step, index) => {
+         ScrollTrigger.create({
+             trigger: step,
+             start: "top center", // When the top of the text hits the center of screen
+             end: "bottom center",
+             onEnter: () => activateStep(index),
+             onEnterBack: () => activateStep(index),
+         });
+     });
+     function activateStep(index) {
+        // Remove active class from all text steps
+        steps.forEach(s => s.classList.remove("active"));
+        // Remove active class from all images
+        visuals.forEach(v => v.classList.remove("active"));
 
-        const frameCount = 150; 
-        const currentFrame = index => (
-            `assets/images/home/sequence/frame_${(index + 1).toString().padStart(4, '0')}.jpg`
-        );
-
-        const images = [];
-        const seq = { frame: 0 }; 
-
-        for (let i = 0; i < frameCount; i++) {
-            const img = new Image();
-            img.src = currentFrame(i);
-            images.push(img);
-        }
-
-        images[0].onload = render;
-
-        function render() {
-            // FIX: GSAP outputs decimals (e.g., 1.5) during scrub. We MUST round it to find a valid array index.
-            const frameIndex = Math.round(seq.frame);
-            
-            // FIX: Only draw if the image actually exists and has finished downloading
-            if (images[frameIndex] && images[frameIndex].complete) {
-                context.clearRect(0, 0, canvas.width, canvas.height);
-                context.drawImage(images[frameIndex], 0, 0, canvas.width, canvas.height);
-            }
-        }
-
-        gsap.to(seq, {
-            frame: frameCount - 1,
-            snap: "frame",
-            ease: "none",
-            scrollTrigger: {
-                trigger: "#sequence",
-                start: "top top",
-                end: "+=200%",
-                pin: true,
-                scrub: 0.5,
-                anticipatePin: 1
-            },
-            onUpdate: render
-        });
+        // Add active class to current
+        if (steps[index]) steps[index].classList.add("active");
+        if (visuals[index]) visuals[index].classList.add("active");
     }
+
+    // Initialize first step as active immediately
+    activateStep(0);
 
 // 2. Services Stagger Reveal (Forced End States)
 gsap.fromTo(".service-card", 
