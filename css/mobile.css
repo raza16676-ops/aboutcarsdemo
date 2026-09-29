@@ -56,7 +56,7 @@
     }
 
     .logo-img {
-        max-height: 42px;
+        max-height: 30px;
     }
 
     header > .btn-primary,
@@ -186,7 +186,8 @@
         max-width: 280px;
         display: inline-block;
         text-align: center;
-        background: #1a2744;
+        background: transparent;
+        color: var(--text-main);
         border: 0;
         border-radius: 999px;
         padding: 14px 22px;
@@ -266,7 +267,7 @@
     /* Service overlay bands (KleenPark style) */
     .services-grid {
         grid-template-columns: 1fr;
-        gap: 18px;
+        gap: 40px;
     }
 
     .service-card {
