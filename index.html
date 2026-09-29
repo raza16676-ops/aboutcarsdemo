@@ -9,6 +9,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/mobile.css">
     
     <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
@@ -39,8 +40,12 @@
             <a href="addons.html">Add-ons</a>
             <a href="about.html">About</a>
             <a href="past-works.html">PAST WORKS</a>
+            <a href="contact.html" class="btn-primary mobile-book">Book Now</a>
         </nav>
         <a href="contact.html" class="btn-primary">Book Now</a>
+        <button type="button" class="menu-toggle" aria-label="Open menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
     </header>
 
     <!-- HERO SECTION -->
@@ -80,26 +85,31 @@
             <!-- Scrolling Steps (Right) -->
             <div class="process-steps">
                 <div class="step interactive" data-step="1">
+                    <img src="assets/images/detailing/img1.webp" alt="Inspection Light" class="mobile-step-img">
                     <span class="step-num">01</span>
                     <h3>Inspect</h3>
                     <p>Every surface is evaluated under specialized lighting to identify microscopic clear coat defects, swirl marks, and contamination.</p>
                 </div>
                 <div class="step interactive" data-step="2">
+                    <img src="assets/images/detailing/img2.webp" alt="Snow Foam Wash" class="mobile-step-img">
                     <span class="step-num">02</span>
                     <h3>Clean</h3>
                     <p>A pH-neutral, multi-stage decontamination wash safely lifts dirt without introducing new scratches, stripping away old waxes.</p>
                 </div>
                 <div class="step interactive" data-step="3">
+                    <img src="assets/images/detailing/img3.webp" alt="Machine Polishing" class="mobile-step-img">
                     <span class="step-num">03</span>
                     <h3>Correct</h3>
                     <p>Precision machine polishing levels the clear coat, permanently removing swirls, scratches, and oxidation to restore optical clarity.</p>
                 </div>
                 <div class="step interactive" data-step="4">
+                    <img src="assets/images/detailing/img4.jpg" alt="Applying Coating" class="mobile-step-img">
                     <span class="step-num">04</span>
                     <h3>Protect</h3>
                     <p>We seal the pristine finish with advanced ceramic coatings or sealants, creating a hydrophobic barrier against the elements.</p>
                 </div>
                 <div class="step interactive" data-step="5">
+                    <img src="assets/images/works/work5.jpeg" alt="Flawless Reflection" class="mobile-step-img">
                     <span class="step-num">05</span>
                     <h3>Finish</h3>
                     <p>Final inspection ensures absolute perfection. Glass is clarified, trim is conditioned, and the interior is meticulously reset.</p>
@@ -120,7 +130,9 @@
                 </div>
                 <div class="service-info">
                     <h3>Premium Detailing</h3>
+                    <span class="service-tagline">Restore paint. Elevate the cabin.</span>
                     <span class="arrow">→</span>
+                    <span class="service-read">Read More</span>
                 </div>
             </a>
 
@@ -132,7 +144,9 @@
                 </div>
                 <div class="service-info">
                     <h3>PPF & Wraps</h3>
+                    <span class="service-tagline">Invisible armor. Bold color change.</span>
                     <span class="arrow">→</span>
+                    <span class="service-read">Read More</span>
                 </div>
             </a>
 
@@ -143,40 +157,48 @@
                 </div>
                 <div class="service-info">
                     <h3>Tesla Upgrades</h3>
+                    <span class="service-tagline">Bespoke hardware for Model 3 / Y / S / X</span>
                     <span class="arrow">→</span>
+                    <span class="service-read">Read More</span>
                 </div>
             </a>
 
             <!-- Service Card 4 -->
             <a href="addons.html" class="service-card interactive">
-                <div class="service-card">
+                <div class="service-img">
                     <img src="assets/images/home/1.jpg" alt="Premium Window Tinting" class="img-placeholder">
                 </div>
                 <div class="service-info">
                     <h3>WINDOW TINTING</h3>
+                    <span class="service-tagline">Heat control and UV protection.</span>
                     <span class="arrow">→</span>
+                    <span class="service-read">Read More</span>
                 </div>
             </a>   
 
             <!-- Service Card 5 -->
             <a href="addons.html" class="service-card interactive">
-                <div class="service-card">
+                <div class="service-img">
                     <img src="assets/images/home/2.jpg" alt="Ceramic Coating" class="img-placeholder">
                 </div>
                 <div class="service-info">
                     <h3>CERAMIC COATING</h3>
+                    <span class="service-tagline">Gloss, hydrophobics, long-term protection.</span>
                     <span class="arrow">→</span>
+                    <span class="service-read">Read More</span>
                 </div>
             </a>
 
             <!-- Service Card 6 -->
             <a href="addons.html" class="service-card interactive">
-                <div class="service-card">
+                <div class="service-img">
                     <img src="assets/images/home/3.jpg" alt="Wrap Removal" class="img-placeholder">
                 </div>
                 <div class="service-info">
                     <h3>WRAP REMOVAL</h3>
+                    <span class="service-tagline">Safe peel. Paint-ready finish.</span>
                     <span class="arrow">→</span>
+                    <span class="service-read">Read More</span>
                 </div>
             </a>
 
@@ -190,18 +212,22 @@
             <div class="benefit-item">
                 <span class="num">01</span>
                 <h4>Precision Hand Wash</h4>
+                <p class="benefit-copy">A pH-balanced, multi-stage wash that lifts dirt without introducing swirls.</p>
             </div>
             <div class="benefit-item">
                 <span class="num">02</span>
                 <h4>Advanced Paint Protection</h4>
+                <p class="benefit-copy">Ceramic coatings and PPF engineered to resist chips, UV, and chemical etch.</p>
             </div>
             <div class="benefit-item">
                 <span class="num">03</span>
                 <h4>Technology-Driven Detailing</h4>
+                <p class="benefit-copy">Specialized lighting and measured correction so every defect is found and fixed.</p>
             </div>
             <div class="benefit-item">
                 <span class="num">04</span>
                 <h4>Experienced Technicians</h4>
+                <p class="benefit-copy">Specialists who treat every vehicle as a unique canvas, not a production line.</p>
             </div>
         </div>
     </section>

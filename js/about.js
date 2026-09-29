@@ -3,12 +3,13 @@
 // =====================================================
 
 document.addEventListener("DOMContentLoaded", () => {
+    const isMobile = window.matchMedia('(max-width: 900px)').matches;
     
     // 1. Story Image Clip-Path Reveal
     const storyImages = document.querySelectorAll('.reveal-img');
     
+    if (!isMobile) {
     storyImages.forEach(img => {
-        // Initial state: image is hidden behind a clip-path
         gsap.set(img, { clipPath: 'inset(100% 0 0 0)' });
         
         gsap.to(img, {
@@ -21,6 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
             ease: "power3.inOut"
         });
     });
+    }
 
     // 2. Animated Counter for Stats
     const counters = document.querySelectorAll('.counter');
@@ -49,7 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    // 3. Workshop Grid Stagger
+    if (!isMobile) {
     gsap.from(".workshop-img", {
         scrollTrigger: {
             trigger: ".workshop-grid",
@@ -61,5 +63,6 @@ document.addEventListener("DOMContentLoaded", () => {
         stagger: 0.2,
         ease: "power3.out"
     });
+    }
 
 });

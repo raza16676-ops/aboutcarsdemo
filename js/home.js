@@ -3,37 +3,35 @@
 // =====================================================
 
 document.addEventListener("DOMContentLoaded", () => {
-    
-     // 1. Process Section Scroll Logic
-     const steps = document.querySelectorAll(".step");
-     const visuals = document.querySelectorAll(".process-img");
- 
-     // Loop through each text step and create a ScrollTrigger
-     steps.forEach((step, index) => {
-         ScrollTrigger.create({
-             trigger: step,
-             start: "top center", // When the top of the text hits the center of screen
-             end: "bottom center",
-             onEnter: () => activateStep(index),
-             onEnterBack: () => activateStep(index),
-         });
-     });
-     function activateStep(index) {
-        // Remove active class from all text steps
-        steps.forEach(s => s.classList.remove("active"));
-        // Remove active class from all images
-        visuals.forEach(v => v.classList.remove("active"));
+    const isMobile = window.matchMedia('(max-width: 900px)').matches;
 
-        // Add active class to current
+    const steps = document.querySelectorAll(".step");
+    const visuals = document.querySelectorAll(".process-img");
+
+    function activateStep(index) {
+        steps.forEach(s => s.classList.remove("active"));
+        visuals.forEach(v => v.classList.remove("active"));
         if (steps[index]) steps[index].classList.add("active");
         if (visuals[index]) visuals[index].classList.add("active");
     }
 
-    // Initialize first step as active immediately
+    if (!isMobile) {
+        steps.forEach((step, index) => {
+            ScrollTrigger.create({
+                trigger: step,
+                start: "top center",
+                end: "bottom center",
+                onEnter: () => activateStep(index),
+                onEnterBack: () => activateStep(index),
+            });
+        });
+    }
+
     activateStep(0);
 
-// 2. Services Stagger Reveal (Forced End States)
-gsap.fromTo(".service-card", 
+    if (isMobile) return;
+
+    gsap.fromTo(".service-card", 
     { 
         y: 100, 
         opacity: 0 

@@ -184,9 +184,17 @@ header.scrolled {
 .section-padding { padding: 120px 5vw; }
 .text-center { text-align: center; }
 
+.menu-toggle,
+.mobile-book,
+.mobile-step-img,
+.service-tagline,
+.service-read,
+.benefit-copy {
+    display: none;
+}
+
 @media (max-width: 768px) {
     header { padding: 20px; }
-    .nav-links { display: none; } /* Mobile menu implementation will be in JS */
 }
 
 img.img-placeholder {

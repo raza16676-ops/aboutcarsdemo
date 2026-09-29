@@ -3,8 +3,9 @@
 // =====================================================
 
 document.addEventListener("DOMContentLoaded", () => {
-    
-    // 1. Package Cards Entrance Animation
+    const isMobile = window.matchMedia('(max-width: 900px)').matches;
+
+    if (!isMobile) {
     gsap.from(".package-card", {
         scrollTrigger: {
             trigger: ".packages-grid",
@@ -16,6 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
         stagger: 0.2,
         ease: "power3.out"
     });
+    }
 
     // 2. Package Hover Glow Effect (Follows Mouse)
     const cards = document.querySelectorAll('.package-card');

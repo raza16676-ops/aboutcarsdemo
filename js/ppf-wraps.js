@@ -3,8 +3,9 @@
 // =====================================================
 
 document.addEventListener("DOMContentLoaded", () => {
-    
-    // 1. Reveal Animations for Pillars
+    const isMobile = window.matchMedia('(max-width: 900px)').matches;
+
+    if (!isMobile) {
     gsap.from(".reveal-up", {
         scrollTrigger: {
             trigger: ".pillars-section",
@@ -16,6 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
         ease: "power3.out",
         stagger: 0.2
     });
+    }
 
     // 2. Interactive Finish Visualizer Logic
     const buttons = document.querySelectorAll('.finish-btn');
@@ -48,7 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    // 3. Gallery Grid Stagger Reveal
+    if (!isMobile) {
     gsap.from(".gallery-item", {
         scrollTrigger: {
             trigger: ".gallery-section",
@@ -60,5 +62,6 @@ document.addEventListener("DOMContentLoaded", () => {
         ease: "power3.out",
         stagger: 0.15
     });
+    }
 
 });

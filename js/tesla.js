@@ -29,7 +29,9 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    // 2. Bento Grid Animation on Scroll
+    const isMobile = window.matchMedia('(max-width: 900px)').matches;
+
+    if (!isMobile) {
     gsap.from(".bento-card", {
         scrollTrigger: {
             trigger: ".bento-grid",
@@ -42,6 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
         stagger: 0.15,
         ease: "power2.out"
     });
+    }
 
     // 3. Optional: Hover "Scanline" effect for Bento Cards
     const bentoCards = document.querySelectorAll('.bento-card');

@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    // 2. Staggered Entrance Animation
+    if (!window.matchMedia('(max-width: 900px)').matches) {
     gsap.from(".addon-card", {
         scrollTrigger: {
             trigger: ".addons-grid",
@@ -33,5 +33,6 @@ document.addEventListener("DOMContentLoaded", () => {
         ease: "power3.out",
         stagger: 0.1
     });
+    }
 
 });

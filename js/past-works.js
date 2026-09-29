@@ -6,7 +6,9 @@ document.addEventListener("DOMContentLoaded", () => {
     
     // 1. Stagger Reveal for Gallery Items
     const galleryItems = document.querySelectorAll('.gallery-item');
-    
+    const isMobile = window.matchMedia('(max-width: 900px)').matches;
+
+    if (!isMobile) {
     gsap.fromTo(galleryItems, 
         { y: 50, opacity: 0 },
         {
@@ -21,10 +23,12 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         }
     );
+    }
 
     // 2. Stagger Reveal for Review Cards
     const reviewCards = document.querySelectorAll('.review-card');
-    
+
+    if (!isMobile) {
     gsap.fromTo(reviewCards,
         { y: 50, opacity: 0 },
         {
@@ -39,6 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         }
     );
+    }
 // 4. Lightbox Modal Logic
 const lightbox = document.getElementById('lightbox');
 const lightboxImg = document.getElementById('lightbox-img');

@@ -4,7 +4,9 @@
 
 document.addEventListener("DOMContentLoaded", () => {
     
-    // 1. Panel Reveal Animation
+    const isMobile = window.matchMedia('(max-width: 900px)').matches;
+
+    if (!isMobile) {
     gsap.from(".panel-reveal", {
         scrollTrigger: {
             trigger: ".contact-container",
@@ -16,6 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
         stagger: 0.2,
         ease: "power3.out"
     });
+    }
 
     // 2. Form Validation & Submission Logic
     const form = document.getElementById('bookingForm');
