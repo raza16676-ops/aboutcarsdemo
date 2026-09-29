@@ -15,14 +15,7 @@
     }
 
     body {
-        background-color: #111214;
-        background-image: repeating-linear-gradient(
-            -45deg,
-            rgba(255, 255, 255, 0.035) 0,
-            rgba(255, 255, 255, 0.035) 1px,
-            transparent 1px,
-            transparent 10px
-        );
+        background-color: #000000;
         background-attachment: fixed;
     }
 
@@ -188,7 +181,7 @@
         text-align: center;
         background: transparent;
         color: var(--text-main);
-        border: 0;
+        border: 1px solid var(--border-light);
         border-radius: 999px;
         padding: 14px 22px;
     }
@@ -316,8 +309,8 @@
     .service-read {
         display: inline-block;
         margin-top: 10px;
-        background: #1a2744;
-        color: #fff;
+        background: linear-gradient(to top, rgba(52, 52, 52, 0.9), transparent);
+        color: var(--text-main);
         border-radius: 999px;
         padding: 8px 18px;
         font-size: 0.68rem;
