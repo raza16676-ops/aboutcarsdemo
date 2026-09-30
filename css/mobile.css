@@ -408,12 +408,31 @@
 
     /* Detailing packages */
     .packages-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
+        display: flex; /* Changes from grid to flex for horizontal scrolling */
+        flex-direction: row;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        gap: 16px;
+        
+        /* Pulls the slider edge-to-edge on the screen */
+        width: 100vw;
+        margin-left: -10px;
+        padding: 0 20px 24px 20px; 
+        
+        /* Hide scrollbars */
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
+    .packages-grid::-webkit-scrollbar {
+        display: none;
     }
 
     .package-card {
-        padding: 32px 22px;
+        flex: 0 0 85%; /* Card width allows the next package to peek out */
+        scroll-snap-align: center;
+        padding: 32px 30px;
     }
 
     /* PPF */
