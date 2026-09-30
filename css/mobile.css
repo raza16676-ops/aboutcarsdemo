@@ -3,7 +3,7 @@
    Shown only below 900px. Desktop layout is unchanged.
 ===================================================== */
 
-@media (max-width: 900px) {
+@media (max-width: 1024px) {
     * {
         cursor: auto !important;
     }
@@ -49,7 +49,7 @@
     }
 
     .logo-img {
-        max-height: 50px;
+        max-height: 40px;
     }
 
     header > .btn-primary,
@@ -221,22 +221,39 @@
 
     /* Process: stacked cards with inline images */
     .process-wrapper {
-        flex-direction: column;
         margin-top: 12px;
+        width: 200vw;
+        margin-left: 0px; /* Pulls out of the default .section-padding */
     }
-
     .process-visuals {
         display: none;
     }
 
     .process-steps {
-        width: 100%;
-        padding-bottom: 0;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        gap: 16px;
+        padding: 0 20px 24px 20px; /* Adds edge padding back */
+        
+        /* Hide scrollbars for a cleaner app-like feel */
+        -ms-overflow-style: none;
+        scrollbar-width: none;
     }
 
     .step {
+        flex: 0 0 85%; /* Sets card width so the next one peeks in */
+        scroll-snap-align: center;
         opacity: 1 !important;
-        padding: 0 0 40px;
+        padding: 0;
+        
+        /* Optional: Add a subtle background to define the card edges */
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        border-radius: 12px;
+        padding: 16px;
     }
 
     .mobile-step-img {
@@ -259,8 +276,8 @@
 
     /* Service overlay bands (KleenPark style) */
     .services-grid {
-        grid-template-columns: 1fr;
-        gap: 40px;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
     }
 
     .service-card {
