@@ -418,7 +418,7 @@
         /* Pulls the slider edge-to-edge on the screen */
         width: 100vw;
         margin-left: -10px;
-        padding: 0 20px 24px 20px; 
+        padding: 40px 20px 24px 20px; 
         
         /* Hide scrollbars */
         -ms-overflow-style: none;
@@ -432,7 +432,7 @@
     .package-card {
         flex: 0 0 85%; /* Card width allows the next package to peek out */
         scroll-snap-align: center;
-        padding: 32px 30px;
+        padding: 32px 22px;
     }
 
     /* PPF */
